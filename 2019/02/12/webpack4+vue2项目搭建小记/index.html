@@ -5,18 +5,19 @@
   
 
   
-  <title>小刀的随手记</title>
+  <title>webpack4+vue2项目搭建小记 | 小刀的随手记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="web,development">
-<meta property="og:type" content="website">
-<meta property="og:title" content="小刀的随手记">
-<meta property="og:url" content="https://lhf-nife.github.io/index.html">
+  <meta name="description" content="这是一篇vue项目搭建小记，使用webpack4+vue2搭建 前提条件 node.js  开始 新建一个项目目录（此处命名为demo)，进入项目目录，初始化项目  1$ npm init 根据提示填入你想要的信息 12345678910111213141516171819This utility will walk you through creating a package.json file">
+<meta property="og:type" content="article">
+<meta property="og:title" content="webpack4+vue2项目搭建小记">
+<meta property="og:url" content="https://lhf-nife.github.io/2019/02/12/webpack4+vue2项目搭建小记/index.html">
 <meta property="og:site_name" content="小刀的随手记">
-<meta property="og:description" content="web,development">
+<meta property="og:description" content="这是一篇vue项目搭建小记，使用webpack4+vue2搭建 前提条件 node.js  开始 新建一个项目目录（此处命名为demo)，进入项目目录，初始化项目  1$ npm init 根据提示填入你想要的信息 12345678910111213141516171819This utility will walk you through creating a package.json file">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-02-12T13:49:32.726Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小刀的随手记">
-<meta name="twitter:description" content="web,development">
+<meta name="twitter:title" content="webpack4+vue2项目搭建小记">
+<meta name="twitter:description" content="这是一篇vue项目搭建小记，使用webpack4+vue2搭建 前提条件 node.js  开始 新建一个项目目录（此处命名为demo)，进入项目目录，初始化项目  1$ npm init 根据提示填入你想要的信息 12345678910111213141516171819This utility will walk you through creating a package.json file">
   
     <link rel="alternate" href="/atom.xml" title="小刀的随手记" type="application/atom+xml">
   
@@ -63,9 +64,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-webpack4+vue2项目搭建小记" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-webpack4+vue2项目搭建小记" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/02/12/webpack4+vue2项目搭建小记/" class="article-date">
   <time datetime="2019-02-12T08:27:20.000Z" itemprop="datePublished">2019-02-12</time>
@@ -78,8 +77,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/02/12/webpack4+vue2项目搭建小记/">webpack4+vue2项目搭建小记</a>
+    <h1 class="article-title" itemprop="name">
+      webpack4+vue2项目搭建小记
     </h1>
   
 
@@ -136,135 +135,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hexo-github搭建博客小记" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/29/hexo-github搭建博客小记/" class="article-date">
-  <time datetime="2019-01-29T15:23:25.000Z" itemprop="datePublished">2019-01-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/29/hexo-github搭建博客小记/">hexo+github搭建博客小记</a>
-    </h1>
+    <a href="/2019/01/29/hexo-github搭建博客小记/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo+github搭建博客小记</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>这是一篇简易博客搭建笔记，使用<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">hexo</a>+github，轻松搭建属于自己的博客，技能get</p>
-<h2 id="前提条件"><a href="#前提条件" class="headerlink" title="前提条件"></a>前提条件</h2><ul>
-<li>node.js</li>
-<li>git</li>
-<li>github账号，配好ssh-key</li>
-</ul>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><ol>
-<li>安装hexo</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>在本地新建一个文件目录，我取名叫blog</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>由于初始化的hexo自带hello-world页面，则可以直接启动服务</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm i</span><br><span class="line">$ npm server</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li><p>本地服务启动成功，浏览器输入<a href="http://127.0.0.1:4000，即可访问" target="_blank" rel="noopener">http://127.0.0.1:4000，即可访问</a></p>
-</li>
-<li><p>打开blog/_config.yml，配置属于你的博客信息</p>
-</li>
-</ol>
-<p>至此，距离成功还有一半的路</p>
-<h2 id="配合github"><a href="#配合github" class="headerlink" title="配合github"></a>配合github</h2><ol>
-<li><p>在github上新建项目库，项目名称命名为[name].github.io，这里的name是你的github用户名</p>
-</li>
-<li><p>更改_config.yml文件，找到deploy</p>
-</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">    <span class="built_in">type</span>: git</span><br><span class="line">    repository: git@github.com:[name]/[name].github.io.git</span><br><span class="line">    branch: master</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>此时，不要忘记安装hexo部署到git page的deployer，否则在最终部署的时候会报错</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>最后一步啦，把本地代码部署到github上去</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
-<ol start="5">
-<li>打开你的域名[name].github.io，新鲜出炉的博客就好啦</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://lhf-nife.github.io/2019/01/29/hexo-github搭建博客小记/" data-id="cjrj3u0bq0001boch6iew3up7" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/01/29/hello-world/" class="article-date">
-  <time datetime="2019-01-29T11:25:27.387Z" itemprop="datePublished">2019-01-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://lhf-nife.github.io/2019/01/29/hello-world/" data-id="cjrj3u0bj0000bochtrd5zrrx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         

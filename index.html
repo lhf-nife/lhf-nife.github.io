@@ -117,14 +117,36 @@
 </ol>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import router from <span class="string">'./src/router'</span></span><br><span class="line"></span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: <span class="string">'#app'</span>,</span><br><span class="line">  router: router</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <ol start="7">
-<li>同样，运行npm run dev，打开浏览器，即可看到刚刚写的路由信息</li>
+<li>同样，运行npm run dev，打开浏览器，即可看到刚刚写的Home页面</li>
 </ol>
 <p><img src="https://github.com/lhf-nife/lhf-nife.github.io/tree/master/css/images/router_success.png" alt=""></p>
+<h2 id="多个路由切换"><a href="#多个路由切换" class="headerlink" title="多个路由切换"></a>多个路由切换</h2><ol>
+<li>在src/views目录下，再新建一个文件，routerTest.vue，用作路由切换</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;&#123;&#123; message &#125;&#125;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="built_in">export</span> default &#123;</span><br><span class="line">    data: () =&gt; (&#123;message: <span class="string">'Hello router-test!'</span>&#125;)</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>在src/router/index.js文件中，将上一步新增的文件import进来</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import RouterTest from <span class="string">'../views/RouterTest'</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>修改src/router/index.js中的routes配置，加入路由</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">routes: [&#123;</span><br><span class="line">    path: <span class="string">'/'</span>,</span><br><span class="line">    component: Home</span><br><span class="line">&#125;,&#123;</span><br><span class="line">    path: <span class="string">'/test'</span>,</span><br><span class="line">    component: RouterTest</span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><p>在浏览器输入<a href="http://127.0.0.1:7800/test，即可看到新增的路由页面" target="_blank" rel="noopener">http://127.0.0.1:7800/test，即可看到新增的路由页面</a></p>
+</li>
+<li><p>直接在浏览器里面输地址非常不友好，需要加入菜单导航和路由相结合。修改根目录下index.html，增加导航</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">"app"</span>&gt;</span><br><span class="line">        &lt;div id=<span class="string">"nav"</span>&gt;</span><br><span class="line">            &lt;router-link to=<span class="string">"/"</span>&gt;Home&lt;/router-link&gt; |</span><br><span class="line">            &lt;router-link to=<span class="string">"/test"</span>&gt;<span class="built_in">test</span>&lt;/router-link&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;router-view&gt;&lt;/router-view&gt;&lt;!--路由替换位置--&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li>由于配置了热更新，页面自动刷新，可以点击’home’或者’test’导航，查看对应变化</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lhf-nife.github.io/2019/02/13/vue-router使用小记/" data-id="cjs2wbtf80002swchs20ysh24" class="article-share-link">Share</a>
+      <a data-url="https://lhf-nife.github.io/2019/02/13/vue-router使用小记/" data-id="cjs2xhe270002jcch4rmyyd6l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -199,7 +221,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lhf-nife.github.io/2019/02/12/webpack4+vue2项目搭建小记/" data-id="cjs2wbtfa0003swchh4svdake" class="article-share-link">Share</a>
+      <a data-url="https://lhf-nife.github.io/2019/02/12/webpack4+vue2项目搭建小记/" data-id="cjs2xhe2k0003jcchi4bg5u9d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -278,7 +300,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lhf-nife.github.io/2019/01/29/hexo-github搭建博客小记/" data-id="cjs2wbtey0000swchxxt11fvd" class="article-share-link">Share</a>
+      <a data-url="https://lhf-nife.github.io/2019/01/29/hexo-github搭建博客小记/" data-id="cjs2xhe240001jcch70avxz1y" class="article-share-link">Share</a>
       
       
     </footer>
@@ -323,7 +345,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://lhf-nife.github.io/2019/01/29/hello-world/" data-id="cjs2wbtf50001swchypyw043s" class="article-share-link">Share</a>
+      <a data-url="https://lhf-nife.github.io/2019/01/29/hello-world/" data-id="cjs2xhe1y0000jcch81lihw96" class="article-share-link">Share</a>
       
       
     </footer>
